@@ -7,7 +7,8 @@ def join_nested_strings(src)
     element_index = 0
     while element_index < src[row_index].count do
       
-      total = src.flat_map do |items| items.select { |item| item.is_a?(String) }
+      total = src.flat_map do 
+      |items| items.select { |item| item.is_a?(String) }
       end.join(" ")
       
       element_index += 1
